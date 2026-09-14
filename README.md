@@ -258,6 +258,39 @@ If Share does not offer Embed a map, you are on the mobile app. Use a desktop
 browser, or send the coordinates instead: right click the pin and the numbers at
 the top of the menu are the latitude and longitude.
 
+## Adding photos to the galleries
+
+The two gallery pages now show a real photo grid with a full screen viewer,
+rather than links out to Google Photos. All images are hosted here, which is
+also why Google can index them.
+
+Files live in the `gal/` folder and are named in pairs:
+
+- `gal/1000trees-01.jpg` is the large version shown in the viewer
+- `gal/1000trees-01t.jpg` is the square thumbnail shown in the grid
+
+Resort Dapoli uses `gal/resort-01.jpg` and `gal/resort-01t.jpg`, and so on.
+
+**To add a photograph**, download it from the Google Photos album, then produce
+two versions: a large one about 1400 pixels wide, and a square thumbnail 520 by
+520. Upload both with the next numbers in the sequence, then add one line to the
+`photogrid` block in the relevant HTML file:
+
+```html
+<a class="shot" href="gal/1000trees-07.jpg">
+  <img src="gal/1000trees-07t.jpg" alt="Describe the photo, mentioning Dapoli"
+       width="520" height="520" loading="lazy" decoding="async"></a>
+```
+
+Always write real alt text. It is read aloud to blind visitors and it is how
+these photographs get found in Google Images.
+
+Easier option: send the photographs to whoever maintains this site and have the
+two sizes generated for you. Twenty to thirty images per gallery is a good target.
+
+Keep individual files under about 400 KB. A gallery of thirty uncompressed phone
+photos is 150 MB and will be unusable on mobile data.
+
 ## Moving to your own domain
 
 When escape2kokan.com is ready, go to Settings then Pages and add it as the Custom domain. GitHub will tell you which DNS records to create. Then tick Enforce HTTPS.

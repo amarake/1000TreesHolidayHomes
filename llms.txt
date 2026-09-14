@@ -18,13 +18,13 @@
 
 ## Pages
 
-- [Home](https://amarake.github.io/1000TreesHolidayHomes/index.html)
-- [The project](https://amarake.github.io/1000TreesHolidayHomes/index.htmlprojects/1000-trees/)
-- [About Dapoli](https://amarake.github.io/1000TreesHolidayHomes/index.htmldapoli/)
-- [Places to visit](https://amarake.github.io/1000TreesHolidayHomes/index.htmldapoli/places-to-visit/)
-- [Hotels and homestays](https://amarake.github.io/1000TreesHolidayHomes/index.htmldapoli/hotels-homestays/)
-- [How to reach](https://amarake.github.io/1000TreesHolidayHomes/index.htmldapoli/how-to-reach/)
-- [Holiday home, retirement home](https://amarake.github.io/1000TreesHolidayHomes/index.htmlholiday-home-retirement-home/)
-- [Investment](https://amarake.github.io/1000TreesHolidayHomes/index.htmlsecond-home-investment-konkan/)
-- [Work from a holiday home](https://amarake.github.io/1000TreesHolidayHomes/index.htmlwork-from-holiday-home/)
-- [Contact](https://amarake.github.io/1000TreesHolidayHomes/index.htmlcontact/)
+- [Home](https://www.1000treesdapoli.com/index/)
+- [The project](https://www.1000treesdapoli.com/index.htmlprojects/1000-trees/)
+- [About Dapoli](https://www.1000treesdapoli.com/index.htmldapoli/)
+- [Places to visit](https://www.1000treesdapoli.com/index.htmldapoli/places-to-visit/)
+- [Hotels and homestays](https://www.1000treesdapoli.com/index.htmldapoli/hotels-homestays/)
+- [How to reach](https://www.1000treesdapoli.com/index.htmldapoli/how-to-reach/)
+- [Holiday home, retirement home](https://www.1000treesdapoli.com/index.htmlholiday-home-retirement-home/)
+- [Investment](https://www.1000treesdapoli.com/index.htmlsecond-home-investment-konkan/)
+- [Work from a holiday home](https://www.1000treesdapoli.com/index.htmlwork-from-holiday-home/)
+- [Contact](https://www.1000treesdapoli.com/index.htmlcontact/)

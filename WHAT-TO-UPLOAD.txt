@@ -1,0 +1,38 @@
+1000 TREES: CLEAN URLS
+======================
+
+This replaces the whole site. The structure has changed, so upload
+everything rather than picking files.
+
+WHAT CHANGED
+  Each page now lives in its own folder as index.html, which is how a
+  web server produces a URL without .html on the end.
+
+      layout/index.html      is served as   /layout/
+      project/index.html     is served as   /project/
+
+  The old flat files such as layout.html are still there, but they are
+  now one line redirects to the new address. Anyone who saved or shared
+  an old link still arrives in the right place.
+
+  Canonical tags, sitemap.xml, robots.txt and llms.txt now point at
+  www.1000treesdapoli.com instead of the github.io address.
+
+HOW TO UPLOAD
+  1. Delete everything currently in the repository. The old flat pages
+     must go, or you will have two copies of every page.
+     Tip: tick the checkbox at the top of the file list to select all.
+  2. Unzip this and drag the whole contents in, folders included.
+  3. Commit.
+  4. Hard refresh with Ctrl+Shift+R.
+
+DO NOT DELETE
+  CNAME              holds www.1000treesdapoli.com. Without it the
+                     custom domain detaches and the site falls back to
+                     the github.io address.
+  .nojekyll          stops GitHub processing the files.
+  Both are hidden on Mac. Press Cmd+Shift+Period in Finder to see them.
+
+AFTER IT IS LIVE
+  In Google Search Console, submit the new sitemap at
+  www.1000treesdapoli.com/sitemap.xml

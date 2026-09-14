@@ -431,3 +431,83 @@ button.btn[disabled]{opacity:.6;cursor:default}
 .album span{margin:0 1.2rem 1.1rem}
 .album.pending .albumthumb{filter:none}
 .album.pending{opacity:1;border-style:solid}
+
+/* ---------- photo gallery grid ---------- */
+.photogrid{display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem;margin-top:1.5rem}
+@media (max-width:760px){.photogrid{grid-template-columns:repeat(2,1fr);gap:.5rem}}
+.shot{display:block;position:relative;overflow:hidden;border:1px solid var(--rule);
+  background-color:#FFFFFF !important;line-height:0}
+.shot img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border:0;
+  transition:transform .35s ease}
+.shot:hover img,.shot:focus-visible img{transform:scale(1.05)}
+.galnote{font-size:.9rem;color:var(--muted);margin-top:1rem}
+
+/* ---------- lightbox ---------- */
+.lightbox{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
+  background:rgba(17,26,20,.94);padding:clamp(.6rem,3vw,2.5rem)}
+.lightbox.on{display:flex}
+.lb-stage{margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:.9rem}
+.lb-stage img{max-width:100%;max-height:78vh;width:auto;height:auto;border:0;display:block;
+  box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lb-stage figcaption{font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;
+  color:#C3D2C4;text-align:center;max-width:60ch}
+.lightbox button{position:absolute;background:rgba(255,255,255,.1);color:#fff;border:0;
+  cursor:pointer;border-radius:50%;line-height:1;transition:background .18s}
+.lightbox button:hover{background:rgba(255,255,255,.22)}
+.lb-close{top:clamp(.6rem,2vw,1.4rem);right:clamp(.6rem,2vw,1.4rem);width:46px;height:46px;font-size:30px}
+.lb-prev,.lb-next{top:50%;transform:translateY(-50%);width:50px;height:50px;font-size:32px}
+.lb-prev{left:clamp(.4rem,2vw,1.4rem)} .lb-next{right:clamp(.4rem,2vw,1.4rem)}
+@media (max-width:560px){
+  .lb-prev,.lb-next{width:42px;height:42px;font-size:26px}
+  .lb-stage img{max-height:68vh}
+}
+
+/* ---------- auto sliding gallery ---------- */
+.carousel{position:relative;margin-top:.5rem}
+.track{
+  display:flex;gap:.7rem;overflow-x:auto;scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  padding-bottom:.2rem;
+}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:center;position:relative;line-height:0}
+@media (min-width:820px){.slide{flex:0 0 calc(50% - .35rem)}}
+.slide a{display:block;border:1px solid var(--rule);background-color:#FFF !important;overflow:hidden}
+.slide img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;border:0}
+.slide figcaption{
+  font-family:var(--body);font-size:.92rem;line-height:1.4;color:var(--muted);
+  padding:.7rem .2rem 0;text-align:left;
+}
+
+.carousel .arrow{
+  position:absolute;top:calc(50% - 1.6rem);transform:translateY(-50%);z-index:5;
+  width:42px;height:42px;border-radius:50%;border:1px solid var(--rule);
+  background-color:#FFFFFF !important;color:#17231C;font-size:22px;line-height:1;
+  cursor:pointer;box-shadow:0 3px 12px rgba(23,35,28,.16);
+}
+.carousel .arrow:hover{background-color:#F0F5EE !important;color:#2F5D3A}
+.carousel .prev{left:-8px}
+.carousel .next{right:-8px}
+@media (max-width:600px){.carousel .arrow{width:36px;height:36px;font-size:19px}
+  .carousel .prev{left:2px}.carousel .next{right:2px}}
+
+.dots{display:flex;justify-content:center;gap:.45rem;margin-top:1rem;padding:0;list-style:none}
+.dots button{
+  width:9px;height:9px;padding:0;border-radius:50%;border:0;cursor:pointer;
+  background:#C7D2C5;transition:background .2s,transform .2s;
+}
+.dots button[aria-current="true"]{background:#8A3B22;transform:scale(1.35)}
+
+.carousel .playpause{
+  display:inline-flex;align-items:center;gap:.4rem;margin-top:.8rem;
+  background:none;border:0;cursor:pointer;padding:.3rem 0;
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+}
+.carousel .playpause:hover{color:#2F5D3A}
+
+@media (prefers-reduced-motion:reduce){.track{scroll-behavior:auto}}
+
+/* ---------- video slides ---------- */
+.slide .clip{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;
+  border:1px solid var(--rule);background:#17231C}
