@@ -1,38 +1,28 @@
-1000 TREES: CLEAN URLS
-======================
+FAVICON: LOGO IN THE BROWSER TAB AND IN GOOGLE RESULTS
+======================================================
 
-This replaces the whole site. The structure has changed, so upload
-everything rather than picking files.
+NEW FILES, upload to the repository root:
+  favicon.ico
+  favicon-48.png
+  favicon-96.png
+  icon-192.png
+  icon-512.png
+  apple-touch-icon.png
+  site.webmanifest
 
-WHAT CHANGED
-  Each page now lives in its own folder as index.html, which is how a
-  web server produces a URL without .html on the end.
+CHANGED FILES, every page now links to the icons:
+  index.html          (root)
+  the 13 folder pages (project/, layout/, contact/ and so on)
 
-      layout/index.html      is served as   /layout/
-      project/index.html     is served as   /project/
+All of them are in this zip in the right places. Upload the root files
+and the folders, overwriting what is there.
 
-  The old flat files such as layout.html are still there, but they are
-  now one line redirects to the new address. Anyone who saved or shared
-  an old link still arrives in the right place.
+THE TAB ICON appears as soon as you hard refresh.
 
-  Canonical tags, sitemap.xml, robots.txt and llms.txt now point at
-  www.1000treesdapoli.com instead of the github.io address.
+THE GOOGLE ICON takes longer. Google only refreshes favicons when it
+recrawls the site, usually a few days to a few weeks. You can speed it
+up: in Google Search Console open URL Inspection, enter
+https://www.1000treesdapoli.com/ and click Request Indexing.
 
-HOW TO UPLOAD
-  1. Delete everything currently in the repository. The old flat pages
-     must go, or you will have two copies of every page.
-     Tip: tick the checkbox at the top of the file list to select all.
-  2. Unzip this and drag the whole contents in, folders included.
-  3. Commit.
-  4. Hard refresh with Ctrl+Shift+R.
-
-DO NOT DELETE
-  CNAME              holds www.1000treesdapoli.com. Without it the
-                     custom domain detaches and the site falls back to
-                     the github.io address.
-  .nojekyll          stops GitHub processing the files.
-  Both are hidden on Mac. Press Cmd+Shift+Period in Finder to see them.
-
-AFTER IT IS LIVE
-  In Google Search Console, submit the new sitemap at
-  www.1000treesdapoli.com/sitemap.xml
+Google requires the icon to be square, at least 48x48, and to stay at
+the same address. Do not rename or move these files later.
