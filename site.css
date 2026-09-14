@@ -548,3 +548,33 @@ main .eyebrow{margin-bottom:.5rem}
 
 /* figure carries a default 40px margin in every browser */
 .slide{margin:0}
+
+/* ---- 100vw includes the scrollbar, which was forcing a horizontal scroll ---- */
+html,body{overflow-x:hidden}
+.carousel{width:100%;margin-inline:calc(50% - 50vw);max-width:100vw}
+@supports (width:100dvw){.carousel{margin-inline:calc(50% - 50dvw);max-width:100dvw}}
+
+/* ---- larger photos, roughly three times the area ---- */
+.slide{flex:0 0 92%}
+@media (min-width:620px){.slide{flex:0 0 76%}}
+@media (min-width:1000px){.slide{flex:0 0 60%}}
+@media (min-width:1600px){.slide{flex:0 0 48%}}
+.slide img,.slide .clip{aspect-ratio:16/10}
+.slide figcaption{font-size:.92rem;padding-top:.6rem}
+
+/* ---- tighter page headings ---- */
+.hero{padding:clamp(.9rem,2vw,1.5rem) 0 clamp(.7rem,1.6vw,1.1rem)}
+.hero h1{font-size:clamp(1.85rem,3.6vw,2.6rem);max-width:20ch;margin-bottom:.3em}
+.hero .eyebrow{margin-bottom:.35rem}
+.hero p.lede{font-size:clamp(1rem,1.4vw,1.12rem)}
+.crumbs{padding:.55rem 0 0}
+main section{padding:clamp(1.1rem,2.2vw,1.8rem) 0}
+main section:first-of-type{padding-top:clamp(.8rem,1.6vw,1.2rem)}
+
+/* final sizing pass */
+@media (min-width:1000px){.slide{flex:0 0 66%}}
+@media (min-width:1600px){.slide{flex:0 0 52%}}
+.slide img,.slide .clip{aspect-ratio:4/3}
+@media (min-width:620px){.slide img,.slide .clip{aspect-ratio:16/10}}
+.slide figcaption{padding:.6rem clamp(.8rem,2.5vw,1.2rem) 0}
+.track{padding-inline:0}
