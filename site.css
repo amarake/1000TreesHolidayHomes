@@ -586,3 +586,24 @@ main section:first-of-type{padding-top:clamp(.8rem,1.6vw,1.2rem)}
 /* width:auto lets the negative margins actually widen the box */
 .carousel{width:auto;max-width:none;margin-inline:calc(50% - 50vw)}
 .track{scroll-snap-type:x proximity}
+
+/* ---- centred slide: current photo in the middle, neighbours either side ---- */
+.track{scroll-snap-type:x mandatory;padding-inline:4%}
+.slide{scroll-snap-align:center}
+@media (min-width:620px){.track{padding-inline:12%}}
+@media (min-width:1000px){.track{padding-inline:17%}}
+@media (min-width:1600px){.track{padding-inline:24%}}
+
+/* ---- centre the dots under the carousel ---- */
+.dots{width:100%;max-width:none;margin-inline:auto;padding-inline:0;justify-content:center}
+.carousel .playpause{display:block;margin:.6rem auto 0;text-align:center}
+
+/* ---- one slide centred, neighbours peeking through the track padding ---- */
+.track{padding-inline:6%}
+.slide{flex:0 0 100%}
+@media (min-width:620px){.track{padding-inline:10%}}
+@media (min-width:1000px){.track{padding-inline:14%}}
+@media (min-width:1600px){.track{padding-inline:18%}}
+@media (min-width:620px){.slide{flex:0 0 100%}}
+@media (min-width:1000px){.slide{flex:0 0 100%}}
+@media (min-width:1600px){.slide{flex:0 0 100%}}
